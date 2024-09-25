@@ -1,5 +1,4 @@
-import functools
-
+from textnode import *
 class HTMLNode:
     def __init__(self, tag=None, value=None, children=None, props=None):
         self.tag = tag 
@@ -17,7 +16,8 @@ class HTMLNode:
         for prop in self.props:
             props_html += f' {prop}="{self.props[prop]}"'
         return props_html
-    
+
+
     def __repr__(self):
         return  f"HTMLNode({self.tag}, {self.value}, children: {self.children}, {self.props})"
 
@@ -53,3 +53,4 @@ class ParentNode(HTMLNode):
 
     def __repr__(self):
         return f"ParentNode({self.tag}, children: {self.children}, {self.props})"
+
