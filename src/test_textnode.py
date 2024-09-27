@@ -7,10 +7,9 @@ from textnode import(
     text_type_italic,
     text_type_code,
     text_type_image,
-    text_type_link
+    text_type_link,
+    text_node_to_html_node,
 )
-
-from textnode import *
 
 class TestTextNode(unittest.TestCase):
     def test_eq(self):
